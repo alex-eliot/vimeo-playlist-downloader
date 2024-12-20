@@ -2,15 +2,12 @@ import meow from "meow";
 import { VimeoPlaylistDownloader } from "./src/Downloader.js";
 
 const program = meow(`
-    Usage
-      $ my-cli <input>
- 
-    Options
-      --name  Your name
- 
-    Examples
-      $ my-cli unicorns --name=ponies
-      🦄 ponies
+  Usage
+    $ vimeo-playlist-downloader -p <playlist-url> -f <filename>
+
+  Options
+    --playlist-url, -p  URL of the Vimeo playlist
+    --filename, -f      Filename to save the merged audio and video
 `, {
   flags: {
     playlistUrl: {
